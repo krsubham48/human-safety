@@ -27,7 +27,9 @@
 
 ### Detection
 
-### Segmentation
+<p align="Centre">
+	<img src="Images/yolo2.jpg" />
+</p>
 
 ## Convolution Neural Networks with Fully Connected Layers
 
