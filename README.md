@@ -37,6 +37,9 @@
 
 The CIFAR-100 dataset consists of 60000 32x32 colour images in 20 main classes. There are 50000 training images and 10000 test images. The dataset is created for educational and research purposes and require less computation cpu compatible calculations. It was used for Human Classification task because of small images and thus less computation
 
+<p align="Centre">
+	<img src="Images/cnn5.jpg" />
+</p>
 
 <p align="Centre">
 	<img src="Images/cnn3.jpg" />
