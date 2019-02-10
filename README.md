@@ -76,7 +76,7 @@ The output of YOLO algorithm is an image containing bounding boxes around object
 ## Results
 
 <p align="Centre">
-	<img src="Images/ro.jpg" width="900"/>
+	<img src="Images/ro.jpg" width="850"/>
 </p>
 
 <p align="Centre">
