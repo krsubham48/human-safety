@@ -13,9 +13,17 @@
 
 ## Motivation
 
+<p align="Centre">
+	<img src="Images/whd.jpg" />
+</p>
+
 ## Proposed Solution
 
 ### Classification
+
+<p align="Centre">
+	<img src="Images/cnn1.jpg" />
+</p>
 
 ### Detection
 
@@ -25,15 +33,62 @@
 
 ### Data
 
+The CIFAR-100 dataset consists of 60000 32x32 colour images in 20 main classes. There are 50000 training images and 10000 test images. The dataset is created for educational and research purposes and require less computation cpu compatible calculations. It was used for Human Classification task because of small images and thus less computation
+
+
+<p align="Centre">
+	<img src="Images/cnn3.jpg" />
+</p>
+
 ### Model
+
+<p align="Centre">
+	<img src="Images/cnn2.jpg" />
+</p>
+
+<p align="Centre">
+	<img src="Images/cnn4.jpg" />
+</p>
 
 ## YOLO Model
 
 ### Data
 
+PASCAL VOC provides standardised image data sets for object class recognition. Enables evaluation and comparison of different methods. New images were added in different version of VOC over the years for facilitating different fields of research
+
 ### Model
 
+• YOLO divides an input image in 13x13 sub-images<br />
+• A total of 169 boxes are created over the input image<br />
+• Each of the box is responsible for detecting upto 5 bounding boxes by running the patch through architecture and getting the classification output from last convolution layer
+<br /><br />
+The output of YOLO algorithm is an image containing bounding boxes around objects of interest and the confidence score of each detected object.
+<br />
+<p align="Centre">
+	<img src="Images/yolo1.jpg" />
+</p>
+
 ## Results
+
+<p align="Centre">
+	<img src="Images/ro.jpg" />
+</p>
+
+<p align="Centre">
+	<img src="Images/r3.jpg" />
+</p>
+
+<p align="Centre">
+	<img src="Images/r4.jpg" />
+</p>
+
+<p align="Centre">
+	<img src="Images/r1.jpg" />
+</p>
+
+<p align="Centre">
+	<img src="Images/r2.jpg" />
+</p>
 
 ## Conclusion
 
