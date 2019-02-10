@@ -2,10 +2,10 @@
 
 ## Contents
 
-1. [Motivation](#Motivation)
-2. [Proposed Solution](#Proposed)
-3. [CNN](#Convolution)
-4. [YOLO](#YOLO)
+1. [Motivation](#Motivation - Why Human Detection?)
+2. [Proposed Solution](#Proposed Solution)
+3. [CNN](#Convolution Neural Networks with Fully Connected Layers)
+4. [YOLO](#YOLO Model)
 5. [Results](#Results)
 6. [Conclusion](#Conclusion)
 7. [Future Work](#Future)
