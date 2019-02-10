@@ -52,7 +52,7 @@ The CIFAR-100 dataset consists of 60000 32x32 colour images in 20 main classes. 
 </p>
 
 <p align="Centre">
-	<img src="Images/cnn4.jpg" width="450"/>
+	<img src="Images/cnn4.jpg" width="500"/>
 </p>
 
 ## YOLO Model
