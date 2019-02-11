@@ -13,18 +13,18 @@
 
 ## Motivation
 
-Human Detection is one of the major concern in any new development and application. Self-driving cars are being developed to increase human comfort in driving. The algorithm in these cars are trained on massive datasets and under a variety of conditions to provide human-like driving experience to users. Autonomous drones are also being developed to uplift the ease in delivery systems and other uses. Automatic surveillance uses specialised Artificial Intelligence algorithms to provide safety and security in public areas. Some military vehicles and systems also uses cameras to  fire automatically and keep intruders away. New humanoid robots and machines are developed by researchers at rapid rate to assist humans in everyday work and to carry out difficult tasks. An example of this is bomb-disposal squad in which robots can be used to avoid casualties.=
+Human Detection is one of the major concern in any new development and application. Self-driving cars are being developed to increase human comfort in driving. The algorithm in these cars are trained on massive datasets and under a variety of conditions to provide human-like driving experience to users. Autonomous drones are also being developed to uplift the ease in delivery systems and other uses. Automatic surveillance uses specialised Artificial Intelligence algorithms to provide safety and security in public areas. Some military vehicles and systems also uses cameras to  fire automatically and keep intruders away. New humanoid robots and machines are developed by researchers at rapid rate to assist humans in everyday work and to carry out difficult tasks. An example of this is bomb-disposal squad in which robots can be used to avoid casualties
 <br />
 <p align="Centre">
 	<img src="Images/whd.jpg" />
 </p>
 <br />
-In all the use cases mentioned above, humans are of primary concern and has to be dealt separately. A self-driving vehicle must be trained implicitly to avoid hitting humans, among other objects since a collision with tree causes much less casualty than a collision with another human. Same is the case with other cases mentioned. If a humanoid robot fail to detect humans in its vicinity, it might harm the subject unknowingly.<br/><br/>
+In all the use cases mentioned above, humans are of primary concern and has to be dealt separately. A self-driving vehicle must be trained implicitly to avoid hitting humans, among other objects since a collision with tree causes much less casualty than a collision with another human. Same is the case with other cases mentioned. If a humanoid robot fail to detect humans in its vicinity, it might harm the subject unknowingly<br/><br/>
 Human Detection thus becomes a vital topic to work upon. A machine perceives outside world mainly with cameras. We propose methods to classify and detect humans in an image containing multiple objects like trees, lakes, mountains, vehicles etc. We propose to use the new and emerging field of Deep Learning to accomplish this task. Deep learning has proven its capabilities in providing state-of-art results compared to conventional methods. We use CIFAR-100 dataset to train a Convolutional Neural Network (CNN) to perform classification task. The model is able to detect humans in an image containing different objects. The model is biased to detect humans accurately and the test set accuracy obtained on human images was 98.59%. Next, we propose to use YOLO model architecture with its pre-trained weights available on Darknet for detection. This model is one of a kind which creates rectangular bounding boxes around human subjects in an image containing multiple objects. The proposed future works in this regard includes Human Segmentation and Instance Segmentation
 
 ## Proposed Solution
 
-We propose a Deep Learning based approach for Human Classification and Detection task. Deep learning approaches have earlier proved to provide state of art result in many common tasks performed easily by humans. These tasks include speech recognition, gesture recognition, text-to-speech conversion, language translation etc. One of the major task in this regard is Human Detection, which is the most vital subset of Object Detection task. Object Detection involves classification of objects into different categories and detecting the region in which the object is contained in image. We first focus on classification task in which we classify whether an image contains a human or not. Next, we focus on detection task which deals with drawing a bounding box around humans present in the input image.
+We propose a Deep Learning based approach for Human Classification and Detection task. Deep learning approaches have earlier proved to provide state of art result in many common tasks performed easily by humans. These tasks include speech recognition, gesture recognition, text-to-speech conversion, language translation etc. One of the major task in this regard is Human Detection, which is the most vital subset of Object Detection task. Object Detection involves classification of objects into different categories and detecting the region in which the object is contained in image. We first focus on classification task in which we classify whether an image contains a human or not. Next, we focus on detection task which deals with drawing a bounding box around humans present in the input image
 
 ### Classification
 
@@ -40,6 +40,7 @@ We propose a Deep Learning based approach for Human Classification and Detection
 
 ## Convolution Neural Networks with Fully Connected Layers
 
+Object classification deals with classifying an image as positive or negative, depending upon whether a particular object is contained in image or not. This acts as the first step in human detection. The proposed model takes any image as input and give binary output based on presence of humans in the input image. A Convolutional Neural Network is used to train the model on CIFAR-100 dataset
 
 ### Data
 
@@ -60,18 +61,22 @@ The images read above is saved as jpg images in a Data Original folder for furth
 ### Model
 
 The model consists of a series of convolutional and max-pooling layers followed by a few dense layers which gives the output. The convolutional layer is used for feature extraction. Padding is used to preserve the size of inputs and outputs to convolutional layer. Max-pooling layer is used to reduce the feature vector size after each convolution layer, thus reducing the number of parameters to be processed in subsequent layers. The use of max-pooling layers to reduce the number of parameters reduces the number of computations required. Batch Normalisation layer is used normalise weights after the corresponding layers. This provides generalisation and produces similar validation and train results. To further enhance generalisation, dropout layer is used to randomly switch off some nodes in correspondence with the blocking probability specified. Rectified Linear Units are used as activation function for all except the last layer. The last layer uses Softmax activation function. It has 20 nodes as output, with each node describing the probability of output being the corresponding layer
+<br /><br />
+The work flow of the classification model when an image is given as input is shown below
 
 <p align="Centre">
 	<img src="Images/cnn2.jpg" />
 </p>
 
-The work flow of the classification model when an image is given as input is shown below
+The hyper-parameters for the classification model explained above is shown below
 
 <p align="Centre">
 	<img src="Images/cnn4.jpg" width="600"/>
 </p>
 
 ## YOLO Model
+
+You Only Look Once(YOLO) is a state-of-art, real time object detection system. Unlike Classification model, YOLO does not contain a fully connected layer at the end. YOLO is used for both, classification as well as detection. It gives the confidence score to each of the predicted class. YOLO is just a very big stack of convolution layers which creates dense feature vector for object detection
 
 ### Data
 
@@ -91,10 +96,13 @@ The output of YOLO algorithm is an image containing bounding boxes around object
 
 ## Results
 
+The graphs below shows the variation of training and validation accuracy and loss as the number of epochs increased
 
 <p align="Centre">
 	<img src="Images/ro.jpg" width="850"/>
 </p>
+
+Below are some sample images from test set. Some of the images are random images(images not present in the test set)
 
 <p align="Centre">
 	<img src="Images/r3.jpg" />
@@ -104,9 +112,13 @@ The output of YOLO algorithm is an image containing bounding boxes around object
 	<img src="Images/r4.jpg" />
 </p>
 
+The results obtained on test set for classification model is shown below
+
 <p align="Centre">
 	<img src="Images/r1.jpg" width="750"/>
 </p>
+
+The figure shows the result of YOLO detection model for human detection on our sample data
 
 <p align="Centre">
 	<img src="Images/r2.jpg" />
