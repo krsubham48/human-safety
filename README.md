@@ -1,5 +1,7 @@
 # Human Safety Using Deep Learning
 
+This repository contains the description and instructions to run my minor project during final year at NIT Raipur
+
 ## Contents
 
 1. [Motivation](#Motivation)
